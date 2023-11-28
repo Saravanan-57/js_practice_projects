@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>length converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>KG TO G</h2>
+        <div class="inputdiv">
+            <input type="text" name="input" id="input" placeholder="Enter Kg">
+        </div>
+        <div id="button"> 
+            <button type ="submit" onclick="cvt()">Convert</button>
+        </div>
+        <div id="result">
+
+        </div>
+    </div>
+    <script>
+        function cvt(){
+            
+       
+        let kg = Number(document.getElementById("input").value)
+       
+        let g = kg*1000
+        let res = document.getElementById("result")
+        res.innerHTML = g + " Grams"
+
+    }
+    </script>
+</body>
+</html>

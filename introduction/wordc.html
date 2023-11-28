@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>word count</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <textarea name="ta" id="ta" cols="30" rows="10"></textarea><br>
+    <button type="submit" onclick="wcalc()">Count it</button>
+    <div id="res">
+
+    </div>
+    <script>
+        function wcalc(){
+            let ta = document.getElementById("ta").value
+            let ta_arr = ta.split(" ")
+            let wc = ta_arr.length
+            let res = document.getElementById("res")
+            res.innerHTML = wc + " word"
+
+        }
+    </script>
+</body>
+</html>
