@@ -118,3 +118,24 @@ myArr.forEach(val =>{
     li.textContent = val
     document.getElementById("lists").appendChild(li)
 })
+
+let priceUSD = [10,20,30]
+let priceINR  = priceUSD.map(x => x*83)
+console.log(priceINR)
+
+
+const input = [{name : "a", age: 15},
+{name : "b", age: 16},
+{name : "c", age: 61},
+{name : "d", age: 52},
+{name : "e", age: 15},
+]
+let kee = [];
+kee = input.keys()
+
+const ages = input.map(y => y.age>16)
+console.log(ages)
+const greater = input.filter(x => x.age>16)
+console.log(greater)
+
+let cost = [50,65,40,80,60,54,97,68,78,124]
