@@ -102,3 +102,19 @@ arrrr.forEach((val, index, arrrr) =>
 )
 
 console.log(arrrr)
+
+let myArr = ["Chennai ", "Brazil", "Kuniyamuthur", "German"]
+
+myArr.forEach(val => {
+    const opt = document.createElement("option")
+    opt.textContent = val
+    opt.value =val
+    document.getElementById("selectID").appendChild(opt)
+})
+
+
+myArr.forEach(val =>{
+    const li = document.createElement("li")
+    li.textContent = val
+    document.getElementById("lists").appendChild(li)
+})
