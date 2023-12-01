@@ -27,3 +27,78 @@ let findsum = function(){
     return sum
 }
 console.log(`sum of ${arr} is ${findsum()}`)
+let l,b,h = 0
+let volume = (l=10,b=20,h=1) => {return l*b*h}
+
+console.log(volume())
+
+const fsum = (arr) => {
+    let sum = 0
+    for(let val of arr){
+        sum += val
+    }
+    return sum
+}
+console.log(fsum(arr))
+console.clear()
+
+let prod = function(...args){
+    let res = 1
+    for(val of args){
+        res *=val
+    }
+    return res
+
+
+}
+console.log(prod(10,20,30,40))
+console.clear()
+//generators
+
+function* indexvalue(){
+    let index = 1
+    while(true){
+        yield index++
+    }
+}
+let gen = indexvalue();
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+console.log(gen.next().value)
+
+//callback 
+
+function greetConsole(Name){
+    console.log("Hello" , Name)
+}
+function greetHeading(Name){
+    const heading = document.querySelector("h1")
+    heading.innerHTML = "Hello " + Name
+}
+
+function greeet(callback){
+    callback("Saravanan")
+}
+
+greeet(greetConsole)
+// greeet(greetHeading)
+let arrrr = ["Dean", "Roman", "Seth"]
+arrrr.forEach(
+    val =>{
+        console.log(val.toUpperCase())
+    }
+)
+
+// function print(val){
+//     console.log(val.toUpperCase())
+// }
+
+arrrr.forEach((val, index, arrrr) =>
+{
+    arrrr[index] = val.toUpperCase()
+}
+)
+
+console.log(arrrr)
